@@ -11,6 +11,13 @@
         android:id="@+id/network_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         android:gravity="center" />
+
+    <Button
+        android:id="@+id/netowrk_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FINISH"/>
 
 </LinearLayout>
