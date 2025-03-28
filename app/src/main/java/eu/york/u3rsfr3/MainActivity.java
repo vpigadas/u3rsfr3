@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import eu.york.u3rsfr3.networking.NetworkActivity;
+import eu.york.u3rsfr3.recycler.RecyclerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +33,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, NetworkActivity.class);
-                startActivityForResult(intent,8000);
+                startActivityForResult(intent, 8000);
+            }
+        });
+
+        findViewById(R.id.main_recycler).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RecyclerActivity.class);
+                startActivity(intent);
             }
         });
     }
