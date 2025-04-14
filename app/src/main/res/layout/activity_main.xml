@@ -36,6 +36,12 @@
         android:layout_height="wrap_content"
         android:text="Recycler Screen" />
 
+    <Button
+        android:id="@+id/main_database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Database Screen" />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="32dp" />
@@ -45,5 +51,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_name" />
+
 
 </LinearLayout>

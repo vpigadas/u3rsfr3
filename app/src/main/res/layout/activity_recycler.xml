@@ -12,10 +12,17 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="@integer/number_of_items"
         tools:itemCount="4"
         tools:listitem="@layout/holder_item" />
+
+    <Button
+        android:id="@+id/recycler_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Refresh" />
 
 </LinearLayout>
