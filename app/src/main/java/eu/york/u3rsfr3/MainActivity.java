@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import eu.york.u3rsfr3.database.DatabaseActivity;
+import eu.york.u3rsfr3.fragment.CustomFragmentActivity;
 import eu.york.u3rsfr3.networking.NetworkActivity;
 import eu.york.u3rsfr3.recycler.RecyclerActivity;
 import eu.york.u3rsfr3.viewmodel.ViewModelActivity;
@@ -62,6 +63,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ViewModelActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.main_fragment).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CustomFragmentActivity.class);
                 startActivity(intent);
             }
         });

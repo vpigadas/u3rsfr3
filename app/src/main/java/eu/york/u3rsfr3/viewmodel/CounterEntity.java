@@ -49,6 +49,6 @@ public class CounterEntity {
         return "CounterEntity{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                '}';
+                '}'+System.lineSeparator();
     }
 }
