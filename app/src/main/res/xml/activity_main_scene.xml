@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Simple transition without KeyFrameSet -->
+    <Transition
+        app:constraintSetStart="@+id/start"
+        app:constraintSetEnd="@+id/end"
+        app:duration="800">
+
+        <!-- Enable swipe gesture -->
+        <OnSwipe
+            app:touchAnchorId="@+id/profileCard"
+            app:touchAnchorSide="top"
+            app:dragDirection="dragUp" />
+
+    </Transition>
+
+    <!-- COLLAPSED STATE -->
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint android:id="@+id/profileCard"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Constraint android:id="@+id/profileImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/profileCard"
+            app:layout_constraintTop_toTopOf="@id/profileCard" />
+
+        <Constraint android:id="@+id/profileName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toEndOf="@id/profileImage"
+            app:layout_constraintEnd_toEndOf="@id/profileCard"
+            app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+        <Constraint android:id="@+id/jobTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/profileImage"
+            app:layout_constraintEnd_toEndOf="@id/profileCard"
+            app:layout_constraintTop_toBottomOf="@id/profileName" />
+
+        <Constraint android:id="@+id/expandHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="@id/profileCard"
+            app:layout_constraintStart_toStartOf="@id/profileCard"
+            app:layout_constraintEnd_toEndOf="@id/profileCard" />
+
+        <!-- Hide all detail elements -->
+        <Constraint android:id="@+id/emailLabel" android:alpha="0" />
+        <Constraint android:id="@+id/emailValue" android:alpha="0" />
+        <Constraint android:id="@+id/phoneLabel" android:alpha="0" />
+        <Constraint android:id="@+id/phoneValue" android:alpha="0" />
+        <Constraint android:id="@+id/locationLabel" android:alpha="0" />
+        <Constraint android:id="@+id/locationValue" android:alpha="0" />
+        <Constraint android:id="@+id/bioLabel" android:alpha="0" />
+        <Constraint android:id="@+id/bioValue" android:alpha="0" />
+        <Constraint android:id="@+id/callButton" android:alpha="0" />
+        <Constraint android:id="@+id/messageButton" android:alpha="0" />
+
+    </ConstraintSet>
+
+    <!-- EXPANDED STATE -->
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint android:id="@+id/profileCard"
+            android:layout_width="0dp"
+            android:layout_height="450dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Constraint android:id="@+id/profileImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/profileCard"
+            app:layout_constraintTop_toTopOf="@id/profileCard" />
+
+        <Constraint android:id="@+id/profileName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toEndOf="@id/profileImage"
+            app:layout_constraintEnd_toEndOf="@id/profileCard"
+            app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+        <Constraint android:id="@+id/jobTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/profileImage"
+            app:layout_constraintEnd_toEndOf="@id/profileCard"
+            app:layout_constraintTop_toBottomOf="@id/profileName" />
+
+        <Constraint android:id="@+id/expandHint" android:alpha="0" />
+
+        <!-- Show all detail elements -->
+        <Constraint android:id="@+id/emailLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="140dp"
+            android:alpha="1"
+            app:layout_constraintStart_toStartOf="@id/profileCard"
+            app:layout_constraintTop_toTopOf="@id/profileCard" />
+
+        <Constraint android:id="@+id/emailValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            android:alpha="1"
+            app:layout_constraintStart_toEndOf="@id/emailLabel"
+            app:layout_constraintEnd_toEndOf="@id/profileCard"
+            app:layout_constraintTop_toTopOf="@id/emailLabel" />
+
+        <Constraint android:id="@+id/phoneLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:alpha="1"
+            app:layout_constraintStart_toStartOf="@id/profileCard"
+            app:layout_constraintTop_toBottomOf="@id/emailLabel" />
+
+        <Constraint android:id="@+id/phoneValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            android:alpha="1"
+            app:layout_constraintStart_toEndOf="@id/phoneLabel"
+            app:layout_constraintEnd_toEndOf="@id/profileCard"
+            app:layout_constraintTop_toTopOf="@id/phoneLabel" />
+
+        <Constraint android:id="@+id/locationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:alpha="1"
+            app:layout_constraintStart_toStartOf="@id/profileCard"
+            app:layout_constraintTop_toBottomOf="@id/phoneLabel" />
+
+        <Constraint android:id="@+id/locationValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            android:alpha="1"
+            app:layout_constraintStart_toEndOf="@id/locationLabel"
+            app:layout_constraintEnd_toEndOf="@id/profileCard"
+            app:layout_constraintTop_toTopOf="@id/locationLabel" />
+
+        <Constraint android:id="@+id/bioLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:alpha="1"
+            app:layout_constraintStart_toStartOf="@id/profileCard"
+            app:layout_constraintTop_toBottomOf="@id/locationLabel" />
+
+        <Constraint android:id="@+id/bioValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:alpha="1"
+            app:layout_constraintStart_toStartOf="@id/profileCard"
+            app:layout_constraintEnd_toEndOf="@id/profileCard"
+            app:layout_constraintTop_toBottomOf="@id/bioLabel" />
+
+        <Constraint android:id="@+id/callButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="24dp"
+            android:alpha="1"
+            app:layout_constraintStart_toStartOf="@id/profileCard"
+            app:layout_constraintEnd_toStartOf="@id/messageButton"
+            app:layout_constraintTop_toBottomOf="@id/bioValue" />
+
+        <Constraint android:id="@+id/messageButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            android:alpha="1"
+            app:layout_constraintStart_toEndOf="@id/callButton"
+            app:layout_constraintEnd_toEndOf="@id/profileCard"
+            app:layout_constraintTop_toTopOf="@id/callButton" />
+
+    </ConstraintSet>
+
+</MotionScene>

@@ -54,6 +54,18 @@
         android:layout_height="wrap_content"
         android:text="Fragment Screen" />
 
+    <Button
+        android:id="@+id/main_advance_ui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Advance UI Screen" />
+
+    <Button
+        android:id="@+id/main_motion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Motion Screen" />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="32dp" />
