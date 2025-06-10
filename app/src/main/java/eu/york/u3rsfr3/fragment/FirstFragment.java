@@ -27,7 +27,7 @@ public class FirstFragment extends Fragment {
         Bundle parameters = new Bundle();
         parameters.putString("name", name);
         parameters.putInt("age", age);
-        //fragment.setArguments(parameters);
+        fragment.setArguments(parameters);
         return fragment;
     }
 

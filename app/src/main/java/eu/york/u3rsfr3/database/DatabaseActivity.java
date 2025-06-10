@@ -15,7 +15,12 @@ import eu.york.u3rsfr3.R;
 
 public class DatabaseActivity extends AppCompatActivity {
 
-    private Executor executor = new ThreadPoolExecutor(1, 1, 5, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
+    private Executor executor = new ThreadPoolExecutor(
+                    1,
+                    1,
+                    5,
+                    TimeUnit.SECONDS,
+                    new LinkedBlockingQueue<>());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
